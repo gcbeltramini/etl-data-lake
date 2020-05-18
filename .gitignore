@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# File types
+*.json
+*.parquet
+
+# Python
+.ipynb_checkpoints/
+__pycache__/
