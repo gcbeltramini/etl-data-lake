@@ -51,8 +51,8 @@ def etl_extract(base_path: str,
     log_path : str
         Relative path for the log data.
     aws_creds : dict[str, str], optional
-        AWS credentials with keys "AWS_ACCESS_KEY_ID" and
-        "AWS_SECRET_ACCESS_KEY". Mandatory if `base_path` is in AWS S3.
+        AWS credentials with keys "aws_access_key_id" and
+        "aws_secret_access_key". Mandatory if `base_path` is in AWS S3.
 
     Returns
     -------
@@ -63,8 +63,8 @@ def etl_extract(base_path: str,
 
     # Set AWS credentials
     if is_s3_input:
-        set_aws_creds(access_key_id=aws_creds['AWS_ACCESS_KEY_ID'],
-                      secret_access_key=aws_creds['AWS_SECRET_ACCESS_KEY'])
+        set_aws_creds(access_key_id=aws_creds['aws_access_key_id'],
+                      secret_access_key=aws_creds['aws_secret_access_key'])
 
     spark = create_spark_session(is_s3_input=is_s3_input)
 

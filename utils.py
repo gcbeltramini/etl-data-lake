@@ -54,8 +54,7 @@ def read_config(config_file: str) -> configparser.ConfigParser:
     Parameters
     ----------
     config_file : str
-        Configuration file, with AWS keys AWS_ACCESS_KEY_ID and
-        AWS_SECRET_ACCESS_KEY in section "AWS"; and input and output paths.
+        Configuration file.
 
     Returns
     -------

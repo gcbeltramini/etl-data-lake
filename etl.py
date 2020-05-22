@@ -15,7 +15,7 @@ def main():
     song_path = config[src]['song_path']
     log_path = config[src]['log_path']
     output_path = config[src]['output_path']
-    aws_creds = dict(config['AWS'])
+    aws_creds = dict(config['AWS'])  # the keys become lowercase
 
     # Read JSON files (EXTRACT)
     song_log_data = etl_extract(base_path, song_path, log_path, aws_creds)
